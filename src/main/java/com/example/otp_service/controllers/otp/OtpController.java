@@ -24,7 +24,7 @@ public class OtpController {
     public ResponseEntity<Integer> getOTP(@RequestParam String userId) {
        // int otp = 2222;
         //Business logic
-        var otp=otpService.getOtp("123");
+        var otp=otpService.getOtp(userId);
         return ResponseEntity.status(HttpStatus.OK).body(otp);
     }
 
